@@ -7,7 +7,7 @@ import SmallButton from './components/Button/Small/Small';
 import { useStorageState } from './hooks/useSotrageState';
 
 
-const App = (): JSX.Element => {
+export default function App () {
 
     const storage = useStorageState('local');
 
@@ -73,5 +73,3 @@ const App = (): JSX.Element => {
         </FlexContainer>
     );
 };
-
-export default App;

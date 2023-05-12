@@ -35,25 +35,29 @@ Cuando hagas un cambio, en la otra página verás en consola el siguiente evento
 ```
 
 ## Hook useStorageState
-Se encarga de setear la detección de cambios en el `localStorage` realizados por otras páginas y de hacer que el componente de React se vuelva a renderizar ante algún cambio en el storage.
+Se encarga de setear la detección de cambios en el `localStorage` realizados por otras páginas y de hacer que el componente de React se vuelva a renderizar ante algún cambio en el storage (local o session).
 
 ```js
 import { useStorageState } from './hooks/useSotrageState';
 
 /* ... */
 
-const storage = useStorageState('local');
-//or
-const storage = useStorageState('session');
+export default function App () {
 
-/* ... */
+    //para detectar cambios en la misma y en otras páginas
+    const storage = useStorageState('local');
+    
+    //para detectar cambios en la misma página
+    const storage = useStorageState('session');
+
+};
 ```
 
-El hook retorna las siguientes funciones: set, get, rem, len, clear, all, keys
+El hook retorna las siguientes funciones:
 - `set(key: string, value: any): void` - agrega una clave:valor al storage.
 - `get(key: string): any` - retorna el valor de una clave.
-- `rem(key: string): void` - elimina una clave.
-- `len(): number` - retorna la cantidad de claves.
+- `remove(key: string): void` - elimina una clave.
+- `length(): number` - retorna la cantidad de claves.
 - `clear(): void ` - vacía el contenido del storage.
 - `all(): any` - retorna un objeto con el contenido del storage.
 - `keys(): string[]` - retorna la lista de claves del storage.

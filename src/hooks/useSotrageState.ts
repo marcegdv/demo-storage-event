@@ -23,9 +23,9 @@ export const useStorageState = (type: 'local' | 'session') => {
             return null;
         };
     };
-    const rem = (key: string): void => { storage.removeItem(key); updateState(); };
+    const remove = (key: string): void => { storage.removeItem(key); updateState(); };
 
-    const len = (): number => storage.length;
+    const length = (): number => storage.length;
 
     const clear = (): void => { storage.clear(); updateState(); };
 
@@ -59,5 +59,5 @@ export const useStorageState = (type: 'local' | 'session') => {
         };
     }, [handleStorage, type]);
 
-    return { set, get, rem, len, clear, all, keys };
+    return { set, get, remove, length, clear, all, keys, update, setUpdate };
 };

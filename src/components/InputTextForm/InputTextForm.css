@@ -1,0 +1,21 @@
+.input-text-form-label {
+    user-select: none;
+    cursor: pointer;
+}
+
+.input-text-form {
+    /* outline: none; */
+
+    /* max-width: 128px; */
+    width: auto;
+    min-width: 80px;
+
+    border: none;
+    border-radius: 4px;
+    padding: 7px 8px 4px 8px;
+
+    background-color: #333;
+    color: #fff;
+
+    font-size: 16px;
+}

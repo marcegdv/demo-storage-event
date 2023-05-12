@@ -35,7 +35,7 @@ Cuando hagas un cambio, en la otra página verás en consola el siguiente evento
 ```
 
 ## Hook useStorageState
-Se encarga de setear la detección de cambios en el `localStorage` realizados por otras páginas y de hacer que el componente de React se vuelva a renderizar ante algún cambio en el storage (local o session).
+Se encarga de setear la detección de cambios en el `localStorage` realizados por otras páginas y de hacer que el componente de React se vuelva a renderizar (cambios en local o session).
 
 ```js
 import { useStorageState } from './hooks/useSotrageState';

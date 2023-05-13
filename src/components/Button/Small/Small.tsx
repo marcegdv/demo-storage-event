@@ -1,10 +1,10 @@
-import { ColorVariant } from '../../../types/stylesProps';
+import { ColorVariantType } from '../../../types/stylesProps';
 import '../Buttons.css';
 
 export type SmallButtonProps = {
     label: string,
     onPush?: Function,
-    variant?: ColorVariant,
+    variant?: ColorVariantType,
 };
 
 const SmallButton = (props: SmallButtonProps): JSX.Element => {

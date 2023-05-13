@@ -1,23 +1,22 @@
+import { ColorVariant } from '../../../types/stylesProps';
 import '../Buttons.css';
 
-export type SmallButtonVariant =
-    | 'primary'
-    | 'secondary'
-    | 'info'
-    | 'safe'
-    | 'warning'
-    | 'danger';
-
 export type SmallButtonProps = {
-    label?: string,
+    label: string,
     onPush?: Function,
-    variant?: SmallButtonVariant,
+    variant?: ColorVariant,
 };
 
 const SmallButton = (props: SmallButtonProps): JSX.Element => {
     const { label, onPush, variant } = props;
 
-    const handleOnPush = () => onPush ? onPush() : null;
+    const handleOnPush = () => {
+        if (onPush) onPush();
+    };
+
+    const handleOnKeyUp = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+        if ((event.key === ' ' || event.key === 'Enter') && onPush) onPush();
+    };
 
     const classVariant: string = 'button-' + (variant || 'primary');
 
@@ -25,9 +24,9 @@ const SmallButton = (props: SmallButtonProps): JSX.Element => {
         <button
             className={'small-button ' + classVariant}
             onClick={handleOnPush}
-            onKeyUp={handleOnPush}
+            onKeyUp={handleOnKeyUp}
         >
-            {label || ''}
+            {label}
         </button>
     );
 };

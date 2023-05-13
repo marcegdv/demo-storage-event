@@ -10,6 +10,7 @@ const MenuOptions = (props: MenuOptionsProps): JSX.Element => {
     const { children, style, showList } = props;
 
     const handleOpacity = () => showList ? '1' : '0';
+
     const handlePosition = () => {
         return showList ? 'translate(0px, 0px)' : 'translate(-332px, 0%)';
     };

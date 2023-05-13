@@ -26,7 +26,13 @@ const InputTextForm = (props: InputTextProps): JSX.Element => {
 
     return (
         <form onSubmit={handleOnSubmit}>
-            <FlexContainer orientation='row' innerSpace='16'>
+            <FlexContainer
+                orientation='row'
+                innerSpace='16'
+                bgcolorLvl='2'
+                colorLvl='e'
+                label='Agregar nombre a la lista:'
+            >
                 {label ?
                     <label
                         className='input-text-form-label'

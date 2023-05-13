@@ -23,6 +23,7 @@ export const useStorageState = (type: 'local' | 'session') => {
             return null;
         };
     };
+
     const remove = (key: string): void => { storage.removeItem(key); updateState(); };
 
     const length = (): number => storage.length;
@@ -37,7 +38,7 @@ export const useStorageState = (type: 'local' | 'session') => {
         };
         return list;
     };
-    
+
     const keys = (): string[] => {
         const list: string[] = [];
         for (let index = 0; index < storage.length; index++) {

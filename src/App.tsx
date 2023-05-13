@@ -7,7 +7,7 @@ import SmallButton from './components/Button/Small/Small';
 import { useStorageState } from './hooks/useSotrageState';
 
 
-export default function App () {
+export default function App() {
 
     const storage = useStorageState('local');
 
@@ -49,17 +49,15 @@ export default function App () {
                 buttonLabel='Agregar'
                 onPush={handleOnPushkAdd}
             />
-            <FlexContainer orientation='column' innerSpace='16' secondary='start'>
-                <FlexContainer orientation='row' innerSpace='16'>
-                    <SmallButton label='Login' onPush={handleOnPushkSetUser} variant='safe' />
-                    <SmallButton label='Logout' onPush={handleOnPushkRemoveUser} variant='secondary' />
-                </FlexContainer>
-                <FlexContainer orientation='row' innerSpace='16'>
-                    <SmallButton label='Vaciar nombres' onPush={handleOnPushkClear} variant='warning' />
-                    <SmallButton label='Vaciar Storage' onPush={handleOnPushkClearAll} variant='danger' />
-                </FlexContainer>
+            <FlexContainer orientation='row' innerSpace='16' bgcolorLvl='2'>
+                <SmallButton label='Login' onPush={handleOnPushkSetUser} variant='safe' />
+                <SmallButton label='Logout' onPush={handleOnPushkRemoveUser} variant='secondary' />
             </FlexContainer>
-            <FlexContainer orientation='column' innerSpace='8' secondary='start'>
+            <FlexContainer orientation='row' innerSpace='16' bgcolorLvl='2'>
+                <SmallButton label='Vaciar nombres' onPush={handleOnPushkClear} variant='warning' />
+                <SmallButton label='Vaciar Storage' onPush={handleOnPushkClearAll} variant='danger' />
+            </FlexContainer>
+            <FlexContainer orientation='column' innerSpace='16' secondary='start' bgcolorLvl='2' colorLvl='e'>
                 {Object.keys(storage.all()).map(
                     (key: string, index: number) => {
                         return (

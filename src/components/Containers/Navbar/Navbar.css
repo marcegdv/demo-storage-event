@@ -1,0 +1,136 @@
+.navbar-container-horizontal {
+    height: 24px;
+    width: calc(100% - 32px);
+
+    background-color: #222;
+    color: #eee;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+
+    padding: 16px;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.navbar-container-vertical {
+    position: 'relative';
+    
+    background-color: #222;
+    color: #eee;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    padding: 8px;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+
+
+
+
+.navbar-link {
+    color: var(--LINK);
+    text-decoration: none;
+    transition: color 0.15s ease, background-color 0.15s ease;
+
+}
+
+.navbar-link:hover {
+    text-decoration: underline currentcolor;
+    filter: drop-shadow(0 0 3px var(--LINK));
+}
+
+.navbar-link:active {
+    color: var(--LINK-ACTIVE);
+    filter: drop-shadow(0 0 3px var(--LINK-ACTIVE));
+}
+
+
+.navbar-link-highlighted {
+    color: var(--LINK-HIGHTLIGHTED);
+    text-decoration: overline wavy;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.navbar-link-highlighted:hover {
+    text-decoration: underline currentcolor;
+    filter: drop-shadow(0 0 3px var(--LINK-HIGHTLIGHTED));
+}
+
+.navbar-link-highlighted:active {
+    color: var(--LINK-ACTIVE);
+    filter: drop-shadow(0 0 3px var(--LINK-ACTIVE));
+}
+
+
+.navbar-vertical-menu-button-close {
+    display: grid;
+    align-content: center;
+    padding: 0px;
+
+    background-color: transparent;
+    border: none;
+    color: var(--LINK);
+    text-decoration: none;
+    transition: color 0.15s ease, background-color 0.15s ease;
+
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+        filter: drop-shadow(0 0 3px var(--LINK));
+    }
+
+    &:active {
+        color: var(--LINK-ACTIVE);
+        filter: drop-shadow(0 0 3px var(--LINK-ACTIVE));
+    }
+}
+
+.navbar-vertical-menu-button-open {
+    display: grid;
+    align-content: center;
+    padding: 0px;
+
+    background-color: transparent;
+    border: none;
+    color: var(--LINK-HIGHTLIGHTED);
+    text-decoration: none;
+    transition: color 0.15s ease, background-color 0.15s ease;
+
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+        filter: drop-shadow(0 0 3px var(--LINK-HIGHTLIGHTED));
+    }
+
+    &:active {
+        color: var(--LINK-ACTIVE);
+        filter: drop-shadow(0 0 3px var(--LINK-ACTIVE));
+    }
+}
+
+.navbar-vertical-menu-button-close-color {
+    color: var(--LINK);
+}
+.navbar-vertical-menu-button-open-color {
+    color: var(--LINK-HIGHTLIGHTED);
+}
+.navbar-vertical-menu-button-is-being-pressed {
+    color: var(--LINK-ACTIVE);
+    filter: drop-shadow(0 0 3px var(--LINK-ACTIVE));
+}

@@ -1,22 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import App from './App';
+import AppRouter from './routes/routes';
+import { StrictModeProps } from './index.types';
 
 import './styles/vars.css';
 import './index.css';
 
-const USE_STRICT_MODE: boolean = true;
+// const PRODUCTION_MODE: boolean = ENV.PRODUCTION_MODE === 'true';
+const PRODUCTION_MODE: boolean = false; //hardcode
 
-const RenderApp = (): JSX.Element =>
-    USE_STRICT_MODE
-        ? <React.StrictMode>
-            <App />
-        </React.StrictMode>
-        : <App />
+const StrictMode = ({ children, strictMode }: StrictModeProps): JSX.Element => {
+    if (strictMode) return <React.StrictMode>{children}</React.StrictMode>;
+    return children;
+};
+
+const Main = (): JSX.Element => {
+    return (
+        <AppRouter />
+    );
+};
 
 const root: ReactDOM.Root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 
-root.render(<RenderApp />);
+root.render(
+    <StrictMode strictMode={!PRODUCTION_MODE}>
+        <Main />
+    </StrictMode>
+);

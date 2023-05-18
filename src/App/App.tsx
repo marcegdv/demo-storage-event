@@ -5,12 +5,14 @@ import InputTextForm from '../components/InputTextForm/InputTextForm';
 import SmallButton from '../components/Button/Small/Small';
 
 import { useStorageState } from '../hooks/useSotrageState';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function App() {
 
     const storage = useStorageState('local');
 
+    const navigate = useNavigate();
     const inputRef: any = useRef(null);
 
     const handleOnPushkAdd = () => {
@@ -84,6 +86,11 @@ export default function App() {
                     }
                 )}
             </FlexContainer>
+            <SmallButton
+                label='Info'
+                onPush={() => navigate('/info')}
+                variant='info'
+            />
         </FlexContainer>
     );
 };

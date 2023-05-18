@@ -1,0 +1,97 @@
+.code-box-container {
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #1e1e1e;
+    border-radius: 4px;
+    padding: 16px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.code-padding-8 {
+    padding: 0px 5px 1px;
+    border-radius: 3px;
+}
+
+.code-bg {
+    background-color: #1e1e1e;
+}
+
+.used-instruction-color {
+    color: #c586c0
+}
+
+.unused-instruction-color {
+    color: #8d638a;
+}
+
+.used-constant-color {
+    color: #9cdcfe;
+}
+
+.unused-constant-color {
+    color: #729db3;
+}
+
+.used-string-color {
+    color: #ce9178;
+}
+
+.unused-string-color {
+    color: #936b5a;
+}
+
+.used-function-color {
+    color: #dcdcaa;
+}
+
+.unused-function-color {
+    color: #9d9d7b;
+}
+
+.used-object-color {
+    color: #4fc1ff;
+}
+
+.unused-object-color {
+    color: #3f8bb4;
+}
+
+.commentary-color {
+    color: #6a9955;
+}
+
+.reserved-color {
+    color: #569cd6;
+}
+
+.number-color {
+    color: #b5c3a8;
+}
+
+.type-color {
+    color: #4ec9b0;
+}
+
+.element-color {
+    color: #808080;
+}
+
+.punctuation-color {
+    color: #d4d4d4;
+}
+
+.first-level-color {
+    color: #ffd700;
+}
+
+.second-level-color {
+    color: #da70d6;
+}
+
+.third-level-color {
+    color: #179fff;
+}

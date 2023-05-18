@@ -19,21 +19,25 @@ const Navbar = (): JSX.Element => {
             : 'navbar-link';
 
     const getLinks = (): JSX.Element[] => {
-        return ROUTES.map(
-            (page: RouteType) => <Link
-                key={'linkTo' + page.name}
-                className={getLinkCssClass(page.path)}
-                to={page.path}
-            >
-                {page.name}
-            </Link>
+        const output: JSX.Element[] = [];
+        ROUTES.forEach(
+            (page: RouteType) => {
+                if (page.inNavbar) {
+                    output.push(
+                        <Link className={getLinkCssClass(page.path)} to={page.path}>
+                            {page.name}
+                        </Link>
+                    );
+                };
+            }
         );
+        return output;
     };
 
     return (
         <>
             <HorizontalNav linkList={getLinks()} />
-            <VerticalNav linkList={getLinks()} />
+            <VerticalNav linkList={getLinks()} pattern='..-' />
         </>
     );
 };

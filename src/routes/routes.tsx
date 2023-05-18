@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "../pages/home";
 import AboutPage from "../pages/about";
 import HelpPage from "../pages/help";
+import InfoPage from "../pages/info";
 import { RouteType } from "../types/routes.types";
 
 export const ROUTES: RouteType[] = [
@@ -22,6 +23,12 @@ export const ROUTES: RouteType[] = [
         name: 'Help',
         element: <HelpPage />,
         inNavbar: true,
+    },
+    {
+        path: '/info',
+        name: 'Info',
+        element: <InfoPage />,
+        inNavbar: false,
     },
 ];
 

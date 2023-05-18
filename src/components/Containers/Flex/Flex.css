@@ -73,3 +73,9 @@
 .container-flex-secondary-baseline {
     align-items: baseline;
 }
+
+.container-flex-legend {
+    padding: 2px 8px;
+    border-radius: 4px;
+    /* border: 1px solid; */
+}

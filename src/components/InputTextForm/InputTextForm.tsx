@@ -31,7 +31,9 @@ const InputTextForm = (props: InputTextProps): JSX.Element => {
                 innerSpace='16'
                 bgcolorLvl='2'
                 colorLvl='e'
-                label='Agregar nombre a la lista:'
+                label='Agregar nombre a la lista'
+                labelColorLvl='0'
+                labelBgcolorLvl='b'
             >
                 {label ?
                     <label

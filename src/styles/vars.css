@@ -61,3 +61,20 @@
 .color-scale-d { color: var(--SCALE-D); }
 .color-scale-e { color: var(--SCALE-E); }
 .color-scale-f { color: var(--SCALE-F); }
+
+.border-color-scale-0 { border-color: var(--SCALE-0); }
+.border-color-scale-1 { border-color: var(--SCALE-1); }
+.border-color-scale-2 { border-color: var(--SCALE-2); }
+.border-color-scale-3 { border-color: var(--SCALE-3); }
+.border-color-scale-4 { border-color: var(--SCALE-4); }
+.border-color-scale-5 { border-color: var(--SCALE-5); }
+.border-color-scale-6 { border-color: var(--SCALE-6); }
+.border-color-scale-7 { border-color: var(--SCALE-7); }
+.border-color-scale-8 { border-color: var(--SCALE-8); }
+.border-color-scale-9 { border-color: var(--SCALE-9); }
+.border-color-scale-a { border-color: var(--SCALE-A); }
+.border-color-scale-b { border-color: var(--SCALE-B); }
+.border-color-scale-c { border-color: var(--SCALE-C); }
+.border-color-scale-d { border-color: var(--SCALE-D); }
+.border-color-scale-e { border-color: var(--SCALE-E); }
+.border-color-scale-f { border-color: var(--SCALE-F); }
